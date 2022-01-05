@@ -1,0 +1,63 @@
+.logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ytVideo:hover{
+    cursor: pointer;
+}
+#show{        
+    padding: 10px;
+    display: grid;
+    grid-gap: 20px 18px;
+    grid-template-columns: repeat(4,300px); 
+    height: 650px;
+    overflow: scroll;
+}
+#show img{
+    width: 300px;
+    height: 160px;
+}
+#show p{
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    height: 50px;
+    font-family: "Roboto","Arial",sans-serif;
+}
+.channel_name{
+    font-size: 13px;
+    color: rgb(122, 110, 110);
+}
+body{
+    padding: 0px;
+    margin: 0px;
+} 
+.sideMenu{
+    height: 650px;
+    overflow:scroll;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    margin: 10px 0px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+} 
+sup{
+    color: rgb(95, 83, 83);
+}
+.category{
+    /* display: flex; */
+    padding: 7px 0px;
+}
+.category div{
+    margin-left: 40px;
+    background-color: rgb(253,253,253);
+    border: 1px solid rgb(186, 197, 206);
+    border-radius: 16px;
+    padding: 4px 13px ;
+    cursor: pointer;
+}
