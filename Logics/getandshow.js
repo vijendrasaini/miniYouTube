@@ -1,3 +1,17 @@
+const youtubeData = async (API)=>{
+    try {
+        const response = await fetch(API)
+        const data = await response.json()
+        const {items} = data
+        
+        console.log(items)
+        display(items)
+    } catch (error) {
+        console.log(error.massage + "hi")
+    }
+}
+
+
 const display = (arr)=>{
     show.textContent = null
     arr.map(el=>{
@@ -20,7 +34,7 @@ const display = (arr)=>{
         channel_name.textContent = channelTitle
 
         div.onclick = ()=>{
-            obj = {
+           const obj = {
                 v_title : title,
                 v_id : videoId,
                 v_channel : channelTitle
@@ -32,24 +46,9 @@ const display = (arr)=>{
         show.append(div)
     })
 }
-const youtubeData = async (API)=>{
-    try {
-        const response = await fetch(API)
-        const data = await response.json()
-        const {items} = data
-        
-        console.log(items)
-        display(items)
-    } catch (error) {
-        console.log(error.massage + "hi")
-    }
-}
-const fun = ()=>{
-    const search = document.querySelector('#seachBox').value
-    const api = `https://youtube.googleapis.com/youtube/v3/search?maxResults=${limit}&q=${search}&type=video&key=${key}&part=snippet`
-    youtubeData(api)
-}
-// const youtubeTrendingData = async (API2) =>
+
+
+
 async function youtubeTrendingData(API2)
 {
     const response = await fetch(API2)
@@ -57,7 +56,9 @@ async function youtubeTrendingData(API2)
     const {items} = data
     displayTrendingData(items)
 }
-// const displayTrendingData = (arr)=>
+
+
+
 function displayTrendingData(arr)
 {
     show.innerHTML = null
@@ -73,12 +74,4 @@ function displayTrendingData(arr)
 }
 
 
-const show = document.querySelector('#show')
-// key is remove
-// const key = 
-const key = "Upload your key here"
-const limit = 20
-const cc = "IN"
-const trending_api =  `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&chart=mostPopular&regionCode=${cc}&maxResults=25&key=${key}`
-const api2 = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&chart=mostPopular&regionCode=91&maxResults=20&key=${key}`
-youtubeTrendingData(trending_api)
+export {youtubeData, display, youtubeTrendingData, displayTrendingData}

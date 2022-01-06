@@ -6,39 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/599713bf7d.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="videopage.css">
+    <link rel="stylesheet" href="./style/videopage.css">
     <title>Watch video</title>
 </head>
 <body>
-    <div class="container-fluid pb-1">
-        <div class="row mt-1">
-            <div class="col-3">
-                <span><i class="fab fa-youtube text-danger fs-1 ms-3"></i><span class="fs-2 fw-bold logo">YouTubes<sup class=" fs-5">IN</sup></span></span>
-            </div>
-            <div class="col-6 row">
-                <div class="col-10 col-form-label row">
-                    <input type="text" id="seachBox" class="p-1 border-2 border" placeholder="Search">
-                </div>
-                <div class="col-2 pt-2 m-0">
-                    <button onclick="fun()" class="px-1 pb-1 border border-2 border-secondary border border-white bg-white">
-                        <!-- Search -->
-                        <span class=""><i class="fas fa-search fs-5"></i></span>
-                    </button>
-                    <span class="ms-3 "><i class="fas fa-microphone fs-4"></i></span>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="d-flex fs-5 pt-2 row px-5">
-                    <div class="col-3">
-                        <span><i class="fas fa-video"></i></span>
-                    </div>
-                    <div class="col-3"><span><i class="fas fa-th"></i></span></div>
-                    <div class="col-3 "><span><i class="far fa-bell"></i></span></div>
-                    <div class="col-3 fs-4 "><span><i class="fas fa-user-circle"></i></span></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <header></header>
     <div class="container-fluid p-1">
         <div class="row">
             <div class="col-2 sideMenu">
@@ -81,14 +53,26 @@
                 </ul>
             </div>
             <div class="col-10 border-top contentBox" >
+                <div class="category d-flex border-top border-bottom">
+                    <div class="bg-black text-white">All</div>
+                    <div>Podcasts</div>
+                    <div>Motivation</div>
+                    <div>Courses</div>
+                    <div>Live</div>
+                    <div>Trending</div>
+                    <div>Conversation</div>
+                    <div>News</div>
+                    <div>Covid-19</div>
+                    <div>Music</div>
+                </div>
                 <div id="show">
-                    <div>
-                        <iframe width="1240" height="620" src="https://www.youtube.com/embed/8zKuNo4ay8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <!-- <div> -->
+                        <iframe  src="https://www.youtube.com/embed/8zKuNo4ay8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-<script src="videopage.js"></script>
+<script src="./scripts/videopage.js" type="module"></script>
