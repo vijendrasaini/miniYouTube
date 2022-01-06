@@ -74,7 +74,9 @@ function displayTrendingData(arr)
 
 
 const show = document.querySelector('#show')
-const key = 'AIzaSyAZ6WOA0z7tlvrJ5Lq46lDo7tuxK0ruWCo'
+// key is remove
+// const key = 
+const key = "Upload your key here"
 const limit = 20
 const cc = "IN"
 const trending_api =  `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&chart=mostPopular&regionCode=${cc}&maxResults=25&key=${key}`
