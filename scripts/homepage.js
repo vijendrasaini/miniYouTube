@@ -17,9 +17,10 @@ searchButton.addEventListener('click',fun)
 const show = document.querySelector('#show')
 // key is remove
 // const key = "Upload your key here"
-// const key = 'AIzaSyAZ
-// 6WOA0z7tlvr
-// J5Lq46lDo7tuxK0ruWCo'
+// const key = 'AIzaSyAZ1
+// 6WOA0z7tlvr2
+// J5Lq46lDo7tuxK0ruWCo3'
+// const con = [1,2,3] //end to ak
 const limit = 20
 const cc = "IN"
 const trending_api =  `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&chart=mostPopular&regionCode=${cc}&maxResults=25&key=${key}`
